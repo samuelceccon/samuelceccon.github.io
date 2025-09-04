@@ -8,10 +8,10 @@
     body { 
       font-family: "Times New Roman", Times, serif; 
       margin: 0; 
-      padding: 40px;
-      background-color: #fff;
+      padding: 20px;
       display: flex;
-      justify-content: center; /* centraliza horizontalmente */
+      justify-content: center;
+      background-color: #fff;
     }
 
     .wrapper {
@@ -23,7 +23,7 @@
       margin-left: 20px; 
       text-decoration: none; 
       color: black; 
-      font-size: 1.3em; /* maior */
+      font-size: 1.3em; 
       font-weight: bold; 
     }
 
@@ -32,21 +32,21 @@
       margin: 0; 
     }
 
-    /* Header com nome à esquerda e menu à direita */
     .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 30px;
+      flex-wrap: wrap; /* permite quebrar em telas pequenas */
     }
     .header h1 {
       font-size: 2.4em;
     }
 
-    /* Layout principal: duas colunas */
     .container {
       display: flex;
       gap: 40px;
+      flex-wrap: wrap; /* responsivo */
     }
 
     /* Coluna esquerda */
@@ -63,7 +63,7 @@
       margin-bottom: 15px;
     }
     .contact-links {
-      text-align: left; 
+      text-align: left;
     }
     .contact-links a {
       display: block;
@@ -76,13 +76,48 @@
     /* Coluna direita */
     .main {
       flex: 3;
+      min-width: 200px; /* garante mínima legibilidade */
+    }
+    .main p {
+      font-size: 1.15em;
+      line-height: 1.7;
     }
 
-    /* aumenta só o texto dos parágrafos (não títulos) */
-    .main p {
-      font-size: 1.18em; /* um pouco maior */
-      line-height: 1.7;  /* espaçamento maior para leitura */
-    }    
+    /* === Responsivo === */
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column; /* coluna lateral acima do conteúdo */
+        gap: 20px;
+      }
+
+      .sidebar img {
+        width: 140px;
+        height: 140px;
+      }
+
+      nav a {
+        font-size: 1.1em;
+        margin-left: 10px;
+      }
+
+      .main p {
+        font-size: 1em;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .sidebar img {
+        width: 120px;
+        height: 120px;
+      }
+      nav a {
+        font-size: 1em;
+        margin-left: 8px;
+      }
+      .main p {
+        font-size: 0.95em;
+      }
+    }
   </style>
 </head>
 <body>
@@ -96,7 +131,6 @@
     </div>
 
     <div class="container">
-      <!-- Coluna esquerda -->
       <aside class="sidebar">
         <img src="foto.jpeg" alt="Samuel Ceccon">
         <div class="contact-links">
@@ -106,7 +140,6 @@
         </div>
       </aside>
 
-      <!-- Coluna direita -->
       <main class="main">
         <section id="about">
           <h2>About me</h2>
