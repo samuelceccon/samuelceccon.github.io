@@ -5,50 +5,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Samuel Ceccon</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; max-width: 900px; }
-    nav a { margin-right: 15px; text-decoration: none; color: #0366d6; }
-    h1, h2 { color: #333; margin: 0; }
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 40px; 
+      max-width: 1000px; 
+    }
+    nav a { 
+      margin-right: 15px; 
+      text-decoration: none; 
+      color: #0366d6; 
+    }
+    h1, h2 { 
+      color: #333; 
+      margin: 0; 
+    }
 
-    .header {
+    /* Layout principal: duas colunas */
+    .container {
       display: flex;
-      align-items: center;
+      gap: 40px;
+    }
+
+    /* Coluna esquerda */
+    .sidebar {
+      flex: 1;
+      max-width: 250px;
+      text-align: center;
+    }
+    .sidebar img {
+      border-radius: 50%; /* borda redonda */
+      width: 180px;
+      height: 180px;
+      object-fit: cover; /* mantém proporção, corta excesso */
+      object-position: top center; /* foca na parte de cima */
+      margin-bottom: 20px;
+    }
+    .contact-links a {
+      display: block;
+      margin: 5px 0;
+      text-decoration: none;
+      color: #0366d6;
+    }
+
+    /* Coluna direita */
+    .main {
+      flex: 3;
+    }
+
+    /* Header */
+    .header {
       margin-bottom: 30px;
     }
-    .header img {
-      border-radius: 50%; /* borda redonda */
-      width: 160px;
-      height: 160px;
-      margin-right: 25px;
-  object-fit: cover; /* mantém proporção, corta excesso */
-    object-position: top center; /* mostra a parte superior da imagem */
-    }
-    .header-text {
-      display: flex;
-      flex-direction: column;
-    }
-    .header-text h1 {
-      font-size: 2em;
+    .header h1 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
   <div class="header">
-    <img src="foto.jpeg" alt="Samuel Ceccon">
-    <div class="header-text">
-      <h1>Samuel Ceccon</h1>
-      <nav>
-        <a href="#publications">Publications</a>
-        <a href="#cv">CV</a>
-      </nav>
-    </div>
+    <h1>Samuel Ceccon</h1>
+    <nav>
+      <a href="#publications">Publications</a>
+      <a href="#cv">CV</a>
+    </nav>
   </div>
 
-  <section id="about">
-    <h2>About me</h2>
-    <p>I am a PhD candidate in Economics at the University of Brasília, specializing in macroeconomic and fiscal issues in Latin America. I have experience in applied economic research and public finance with multilateral organizations such as the Inter-American Development Bank (IDB).</p>
-  </section>
+  <div class="container">
+    <!-- Coluna esquerda -->
+    <aside class="sidebar">
+      <img src="foto.jpeg" alt="Samuel Ceccon">
+      <div class="contact-links">
+        <a href="mailto:samuel@example.com">Email</a>
+        <a href="cv.pdf" target="_blank">CV</a>
+        <a href="https://www.linkedin.com/in/samuelceccon" target="_blank">LinkedIn</a>
+      </div>
+    </aside>
 
-  <section id = "research interests">
-    <h2>Research Interests</h2>
-    <p> Macroeconomics; Fiscal Policy; Public Finance; Economic History; Latin America</p>
-     </section>
+    <!-- Coluna direita -->
+    <main class="main">
+      <section id="about">
+        <h2>About me</h2>
+        <p>I am a PhD candidate in Economics at the University of Brasília, specializing in macroeconomic and fiscal issues in Latin America. I have experience in applied economic research and public finance with multilateral organizations such as the Inter-American Development Bank (IDB).</p>
+      </section>
+
+      <section id="research-interests">
+        <h2>Research Interests</h2>
+        <p>Macroeconomics; Fiscal Policy; Public Finance; Economic History; Latin America</p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
