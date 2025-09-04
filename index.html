@@ -7,16 +7,26 @@
   <style>
     body { 
       font-family: "Times New Roman", Times, serif; 
-      margin: 40px; 
-      max-width: 1000px; 
+      margin: 0; 
+      padding: 40px;
+      background-color: #fff;
+      display: flex;
+      justify-content: center; /* centraliza horizontalmente */
     }
+
+    .wrapper {
+      max-width: 1000px;
+      width: 100%;
+    }
+
     nav a { 
-      margin-left: 15px; 
+      margin-left: 20px; 
       text-decoration: none; 
       color: black; 
-      font-size: 1.2em;
+      font-size: 1.3em; /* maior */
       font-weight: bold; 
     }
+
     h1, h2 { 
       color: #333; 
       margin: 0; 
@@ -45,21 +55,22 @@
       max-width: 250px;
     }
     .sidebar img {
-      border-radius: 50%; /* borda redonda */
+      border-radius: 50%; 
       width: 180px;
       height: 180px;
-      object-fit: cover; /* mantém proporção, corta excesso */
-      object-position: top center; /* foca na parte de cima */
+      object-fit: cover; 
+      object-position: top center; 
       margin-bottom: 15px;
     }
     .contact-links {
-      text-align: left; /* agora alinhado à esquerda */
+      text-align: left; 
     }
     .contact-links a {
       display: block;
       margin: 5px 0;
       text-decoration: none;
       color: black;
+      font-weight: normal;
     }
 
     /* Coluna direita */
@@ -69,44 +80,45 @@
 
     /* aumenta só o texto dos parágrafos (não títulos) */
     .main p {
-      font-size: 1.15em; /* ajuste aqui para aumentar/reduzir */
-      line-height: 1.6;  /* deixa mais espaçado para leitura */
+      font-size: 1.18em; /* um pouco maior */
+      line-height: 1.7;  /* espaçamento maior para leitura */
     }    
-
   </style>
 </head>
 <body>
-  <div class="header">
-    <h1>Samuel A. S. Ceccon</h1>
-    <nav>
-      <a href="#research">Research</a>
-      <a href="CV_site.pdf" target="_blank">CV</a>
-    </nav>
-  </div>
-
-  <div class="container">
-    <!-- Coluna esquerda -->
-    <aside class="sidebar">
-      <img src="foto.jpeg" alt="Samuel Ceccon">
-      <div class="contact-links">
-        <a href="mailto:samuelsceccon@gmail.com">Email</a>
+  <div class="wrapper">
+    <div class="header">
+      <h1>Samuel A. S. Ceccon</h1>
+      <nav>
+        <a href="#research-interests">Research</a>
         <a href="CV_site.pdf" target="_blank">CV</a>
-        <a href="https://www.linkedin.com/in/samuelceccon/" target="_blank">LinkedIn</a>
-      </div>
-    </aside>
+      </nav>
+    </div>
 
-    <!-- Coluna direita -->
-    <main class="main">
-      <section id="about">
-        <h2>About me</h2>
-        <p>I am a PhD candidate in Economics at the University of Brasília, specializing in macroeconomic and fiscal issues in Latin America. I have experience in applied economic research and public finance with multilateral organizations such as the Inter-American Development Bank (IDB).</p>
-      </section>
+    <div class="container">
+      <!-- Coluna esquerda -->
+      <aside class="sidebar">
+        <img src="foto.jpeg" alt="Samuel Ceccon">
+        <div class="contact-links">
+          <a href="mailto:samuelsceccon@gmail.com">Email</a>
+          <a href="CV_site.pdf" target="_blank">CV</a>
+          <a href="https://www.linkedin.com/in/samuelceccon/" target="_blank">LinkedIn</a>
+        </div>
+      </aside>
 
-      <section id="research-interests">
-        <h2>Research Interests</h2>
-        <p>Macroeconomics; Fiscal Policy; Public Finance; Economic History; Latin America</p>
-      </section>
-    </main>
+      <!-- Coluna direita -->
+      <main class="main">
+        <section id="about">
+          <h2>About me</h2>
+          <p>I am a PhD candidate in Economics at the University of Brasília, specializing in macroeconomic and fiscal issues in Latin America. I have experience in applied economic research and public finance with multilateral organizations such as the Inter-American Development Bank (IDB).</p>
+        </section>
+
+        <section id="research-interests">
+          <h2>Research Interests</h2>
+          <p>Macroeconomics; Fiscal Policy; Public Finance; Economic History; Latin America</p>
+        </section>
+      </main>
+    </div>
   </div>
 </body>
 </html>
