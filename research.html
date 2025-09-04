@@ -53,6 +53,23 @@
     }
     details.no-arrow summary::-webkit-details-marker { display: none; }
     details.no-arrow summary::marker { content: ""; }
+
+    /* Reduz espaço entre o título do item e o summary [Abstract] */
+ul li {
+  margin-bottom: 10px; /* espaço entre itens da lista, antes estava maior */
+}
+
+details.no-arrow {
+  margin-top: 5px;      /* espaço entre título e botão [Abstract] */
+  margin-bottom: 5px;   /* espaço depois do abstract */
+}
+
+details.no-arrow summary {
+  display: inline;       /* deixa o [Abstract] mais próximo do título */
+  margin-top: 0;         /* remove espaço extra em cima */
+  margin-bottom: 0;      /* remove espaço extra embaixo */
+}
+    
   </style>
 </head>
 <body>
