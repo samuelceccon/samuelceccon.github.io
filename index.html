@@ -11,13 +11,24 @@
       max-width: 1000px; 
     }
     nav a { 
-      margin-right: 15px; 
+      margin-left: 15px; 
       text-decoration: none; 
       color: #0366d6; 
     }
     h1, h2 { 
       color: #333; 
       margin: 0; 
+    }
+
+    /* Header com nome à esquerda e menu à direita */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .header h1 {
+      font-size: 2.2em;
     }
 
     /* Layout principal: duas colunas */
@@ -30,7 +41,6 @@
     .sidebar {
       flex: 1;
       max-width: 250px;
-      text-align: center;
     }
     .sidebar img {
       border-radius: 50%; /* borda redonda */
@@ -38,7 +48,10 @@
       height: 180px;
       object-fit: cover; /* mantém proporção, corta excesso */
       object-position: top center; /* foca na parte de cima */
-      margin-bottom: 20px;
+      margin-bottom: 15px;
+    }
+    .contact-links {
+      text-align: left; /* agora alinhado à esquerda */
     }
     .contact-links a {
       display: block;
@@ -50,15 +63,6 @@
     /* Coluna direita */
     .main {
       flex: 3;
-    }
-
-    /* Header */
-    .header {
-      margin-bottom: 30px;
-    }
-    .header h1 {
-      font-size: 2.2em;
-      margin-bottom: 10px;
     }
   </style>
 </head>
@@ -76,9 +80,9 @@
     <aside class="sidebar">
       <img src="foto.jpeg" alt="Samuel Ceccon">
       <div class="contact-links">
-        <a href="mailto:samuel@example.com">Email</a>
+        <a href="mailto:samuelsceccon@gmail.com">Email</a>
         <a href="cv.pdf" target="_blank">CV</a>
-        <a href="https://www.linkedin.com/in/samuelceccon" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/samuelceccon/" target="_blank">LinkedIn</a>
       </div>
     </aside>
 
