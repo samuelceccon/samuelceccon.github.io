@@ -7,7 +7,7 @@
   <style>
     body { 
       font-family: "Times New Roman", Times, serif; 
-      margin: 40px; 
+      margin: 40px auto; 
       max-width: 1000px; 
     }
     nav a { 
@@ -17,10 +17,13 @@
       font-size: 1.2em;
       font-weight: bold; 
     }
-    h1, h2 { 
+    h1, h2, h4 { 
       color: #333; 
-      margin: 0; 
+      margin: 0 0 10px 0; 
     }
+    h4 { font-size: 1.1em; }
+
+    /* Header */
     .header {
       display: flex;
       justify-content: space-between;
@@ -29,7 +32,8 @@
     }
     .header h1 { font-size: 2.4em; }
 
-    .container { display: flex; gap: 40px; }
+    /* Layout principal */
+    .container { display: flex; gap: 40px; flex-wrap: wrap; }
 
     .sidebar { flex: 1; max-width: 250px; }
     .sidebar img {
@@ -43,33 +47,36 @@
     .contact-links { text-align: left; }
     .contact-links a { display: block; margin: 5px 0; text-decoration: none; color: black; }
 
-    .main { flex: 3; }
-    .main p { font-size: 1em; line-height: 1.6; }
+    .main { flex: 3; min-width: 300px; }
+    .main p { font-size: 1em; line-height: 1.6; margin: 5px 0; }
 
-    /* Remove arrow do details */
+    /* Linhas separadoras */
+    hr {
+      border: none;
+      height: 1.5px;
+      background-color: #333;
+      margin: 25px 0;
+    }
+
+    /* Details sem setinha e com menos espaço */
+    details.no-arrow {
+      margin-top: 3px;
+      margin-bottom: 10px;
+    }
     details.no-arrow summary {
       list-style: none;
       cursor: pointer;
+      display: inline;
+      margin: 0;
+      padding: 0;
+      font-weight: bold;
+      color: #0366d6;
     }
     details.no-arrow summary::-webkit-details-marker { display: none; }
     details.no-arrow summary::marker { content: ""; }
 
-    /* Reduz espaço entre o título do item e o summary [Abstract] */
-ul li {
-  margin-bottom: 10px; /* espaço entre itens da lista, antes estava maior */
-}
-
-details.no-arrow {
-  margin-top: 5px;      /* espaço entre título e botão [Abstract] */
-  margin-bottom: 5px;   /* espaço depois do abstract */
-}
-
-details.no-arrow summary {
-  display: inline;       /* deixa o [Abstract] mais próximo do título */
-  margin-top: 0;         /* remove espaço extra em cima */
-  margin-bottom: 0;      /* remove espaço extra embaixo */
-}
-    
+    /* Lista com menos espaço entre itens */
+    ul li { margin-bottom: 10px; }
   </style>
 </head>
 <body>
@@ -127,9 +134,9 @@ details.no-arrow summary {
         </ul>
       </section>
 
-      
       <p><a href="index.html">← Back to Home</a></p>
     </main>
   </div>
 </body>
 </html>
+
