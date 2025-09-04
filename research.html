@@ -3,51 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Samuel Ceccon - Research</title>
+  <title>Samuel A. S. Ceccon - Research</title>
   <style>
-    body { font-family: "Times New Roman", Times, serif; margin: 40px; max-width: 900px; }
-    h1, h2 { color: #333; }
-    a { text-decoration: none; color: #0366d6; }
-    ul { line-height: 1.6; }
+    body { 
+      font-family: "Times New Roman", Times, serif; 
+      margin: 40px; 
+      max-width: 1000px; 
+    }
+    nav a { 
+      margin-left: 15px; 
+      text-decoration: none; 
+      color: black; 
+      font-size: 1.2em;
+      font-weight: bold; 
+    }
+    h1, h2 { 
+      color: #333; 
+      margin: 0; 
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .header h1 { font-size: 2.4em; }
+
+    .container { display: flex; gap: 40px; }
+
+    .sidebar { flex: 1; max-width: 250px; }
+    .sidebar img {
+      border-radius: 50%;
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      object-position: top center;
+      margin-bottom: 15px;
+    }
+    .contact-links { text-align: left; }
+    .contact-links a { display: block; margin: 5px 0; text-decoration: none; color: black; }
+
+    .main { flex: 3; }
+    .main p { font-size: 1.15em; line-height: 1.6; }
+
+    /* Remove arrow do details */
+    details.no-arrow summary {
+      list-style: none;
+      cursor: pointer;
+    }
+    details.no-arrow summary::-webkit-details-marker { display: none; }
+    details.no-arrow summary::marker { content: ""; }
   </style>
 </head>
 <body>
-  <h1>Research & Publications</h1>
-  
-  <h2>Work in Progress</h2>
-  <ul>
-    <li>Crises, Stabilizations, and Reforms An Analysis of Structural Breaks in Latin American Economies 1950-2000
-        <details class="no-arrow">
-      <summary>[Abstract]</summary>
-      <p>This paper identifies major structural breaks in the macroeconomic trajectories of Argentina, Brazil, Chile, and Mexico between 1950 and 2000. Using real GDP and capital stock data from Penn World Table 10.01, it applies the Bai and Perron (2003) methodology, which endogenously detects multiple breakpoints in time series. The results reveal shared turning points—especially in the early 1980s, amid the debt crisis and rising U.S. interest rates—but also highlight the role of domestic factors such as political transitions and institutional reforms. By combining consistent macroeconomic indicators with a robust econometric approach, the study offers a comparative historical perspective on how global shocks and national shifts jointly shaped Latin America’s economic path.</p>
-    </details>
-    </li>
+  <!-- Cabeçalho -->
+  <div class="header">
+    <h1>Samuel A. S. Ceccon</h1>
+    <nav>
+      <a href="research.html">Research</a>
+      <a href="CV_site.pdf" target="_blank">CV</a>
+    </nav>
+  </div>
 
-    <li>Expectations Anchored in the Past: Inflationary Memory and Belief Formation in Mexico
-    <details class="no-arrow">
-      <summary>[Abstract]</summary>
-      <p>Latin America’s history has been marked by episodes of high inflation and economic crises, leaving lasting imprints on the region’s economies. Mexico represents a compelling case, given its recurrent periods of inflationary volatility. This paper examines whether such experiences continue to shape expectations today. Specifically, it investigates whether past inflation episodes in Mexico affect individuals’ current views about future price dynamics, using an Inflation Exposure Index (IEI) that weights years according to the intensity of inflation each person has lived through. To address this question, the study relies on microdata from the Encuesta Nacional sobre Confianza del Consumidor (ENCO), conducted by the Instituto Nacional de Estadística y Geografía (INEGI). Respondents are asked how they expect prices to behave over the next 12 months compared with the previous 12 months, with answers ranging from 1 (“decrease a lot”) to 6 (“increase a lot”). Employing an ordered probit model, the results show that individuals with greater exposure to high-inflation periods are more likely to predict that prices will “increase a lot”. Moreover, the analysis uncovers heterogeneity: women, older respondents, and those with lower educational attainment tend to hold more pessimistic views about inflation. The findings align with existing literature on the persistence of inflationary memories and highlight their policy relevance. Understanding how demographic and experiential factors shape expectation formation is crucial for central banks. These dynamics complicate the management of credibility and the transmission of monetary policy, while underscoring the need for communication strategies tailored to diverse groups of economic agents.</p>
-    </details>
-    </li>
-    
-  </ul>
+  <!-- Layout principal -->
+  <div class="container">
+    <!-- Coluna esquerda -->
+    <aside class="sidebar">
+      <img src="foto.jpeg" alt="Samuel Ceccon">
+      <div class="contact-links">
+        <a href="mailto:samuelsceccon@gmail.com">Email</a>
+        <a href="CV_site.pdf" target="_blank">CV</a>
+        <a href="https://www.linkedin.com/in/samuelceccon/" target="_blank">LinkedIn</a>
+      </div>
+    </aside>
 
-  <style>
-/* Remove arrow from details/summary */
-details.no-arrow summary {
-  list-style: none;       /* Remove bullet/arrow */
-  cursor: pointer;        /* Indicate clickable */
-}
+    <!-- Coluna direita -->
+    <main class="main">
+      <section id="research">
+        <h2>Work in Progress</h2>
+        <ul>
+          <li>
+            Crises, Stabilizations, and Reforms: An Analysis of Structural Breaks in Latin American Economies 1950-2000
+            <details class="no-arrow">
+              <summary>[Abstract]</summary>
+              <p>This paper identifies major structural breaks in the macroeconomic trajectories of Argentina, Brazil, Chile, and Mexico between 1950 and 2000. Using real GDP and capital stock data from Penn World Table 10.01, it applies the Bai and Perron (2003) methodology, which endogenously detects multiple breakpoints in time series. The results reveal shared turning points—especially in the early 1980s, amid the debt crisis and rising U.S. interest rates—but also highlight the role of domestic factors such as political transitions and institutional reforms. By combining consistent macroeconomic indicators with a robust econometric approach, the study offers a comparative historical perspective on how global shocks and national shifts jointly shaped Latin America’s economic path.</p>
+            </details>
+          </li>
 
-details.no-arrow summary::-webkit-details-marker {
-  display: none;          /* Chrome/Safari */
-}
-
-details.no-arrow summary::marker {
-  content: "";            /* Firefox */
-}
-</style>
-
-  <p><a href="index.html">← Back to Home</a></p>
+          <li>
+            Expectations Anchored in the Past: Inflationary Memory and Belief Formation in Mexico
+            <details class="no-arrow">
+              <summary>[Abstract]</summary>
+              <p>Latin America’s history has been marked by episodes of high inflation and economic crises, leaving lasting imprints on the region’s economies. Mexico represents a compelling case, given its recurrent periods of inflationary volatility. This paper examines whether such experiences continue to shape expectations today. Specifically, it investigates whether past inflation episodes in Mexico affect individuals’ current views about future price dynamics, using an Inflation Exposure Index (IEI) that weights years according to the intensity of inflation each person has lived through. To address this question, the study relies on microdata from the Encuesta Nacional sobre Confianza del Consumidor (ENCO), conducted by the Instituto Nacional de Estadística y Geografía (INEGI). Respondents are asked how they expect prices to behave over the next 12 months compared with the previous 12 months, with answers ranging from 1 (“decrease a lot”) to 6 (“increase a lot”). Employing an ordered probit model, the results show that individuals with greater exposure to high-inflation periods are more likely to predict that prices will “increase a lot”. Moreover, the analysis uncovers heterogeneity: women, older respondents, and those with lower educational attainment tend to hold more pessimistic views about inflation. The findings align with existing literature on the persistence of inflationary memories and highlight their policy relevance. Understanding how demographic and experiential factors shape expectation formation is crucial for central banks. These dynamics complicate the management of credibility and the transmission of monetary policy, while underscoring the need for communication strategies tailored to diverse groups of economic agents.</p>
+            </details>
+          </li>
+        </ul>
+      </section>
+      <p><a href="index.html">← Back to Home</a></p>
+    </main>
+  </div>
 </body>
 </html>
