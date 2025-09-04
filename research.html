@@ -32,6 +32,22 @@
     
   </ul>
 
+  <style>
+/* Remove arrow from details/summary */
+details.no-arrow summary {
+  list-style: none;       /* Remove bullet/arrow */
+  cursor: pointer;        /* Indicate clickable */
+}
+
+details.no-arrow summary::-webkit-details-marker {
+  display: none;          /* Chrome/Safari */
+}
+
+details.no-arrow summary::marker {
+  content: "";            /* Firefox */
+}
+</style>
+
   <p><a href="index.html">← Back to Home</a></p>
 </body>
 </html>
